@@ -16,19 +16,25 @@
 </head>
 
 <body>
-    <header>
-        <!-- place navbar here -->
-    </header>
-    <main>
-        <div id="app">
-            {{ message }}
+
+    <main class="bg-dark d-flex">
+        <div id="app" class="align-self-center bg-light container w-50 text-center">
+            <h1>To do List</h1>
+            <div class="list d-flex flex-column align-items-center">
+                <ul>
+                    <li v-for="task in tasks">
+                        {{task}}
+                    </li>
+                </ul>
+            </div>
         </div>
     </main>
-    <footer>
-        <!-- place footer here -->
-    </footer>
 
 
+
+
+    <!-- CDN AXIOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.0/axios.min.js"></script>
 
     <!-- CDN VUE -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
