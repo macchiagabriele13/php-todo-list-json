@@ -21,11 +21,17 @@
         <div id="app" class="align-self-center bg-light container w-50 text-center">
             <h1>To do List</h1>
             <div class="list d-flex flex-column align-items-center">
-                <ul>
-                    <li v-for="task in tasks">
+                <!-- <ul class="list-group list-group-flush">
+                    <li class="list-group-item" v-for="task in tasks">
                         {{task}}
                     </li>
-                </ul>
+                </ul> -->
+                <form action="script.php" method="post">
+                    <div class="form-group">
+                        <label for="newTask"></label>
+                        <input type="text" name="newTask" id="newTask" class="form-control" placeholder="Inserisci nuova task" aria-describedby="helpId">
+                    </div>
+                </form>
             </div>
         </div>
     </main>
